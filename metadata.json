@@ -1,0 +1,5 @@
+{
+  "name": "NAS Behavior Analytics PRD Viewer",
+  "description": "An interactive dashboard and documentation viewer for the NAS Behavior Data Collection Technical Scheme, featuring an AI assistant for PRD queries.",
+  "requestFramePermissions": []
+}
