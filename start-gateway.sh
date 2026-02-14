@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 # start-gateway.sh - OpenClaw Gateway 启动脚本
 
 echo "=== OpenClaw Gateway 启动脚本 ==="
@@ -16,7 +17,7 @@ if [ ! -d "node_modules" ]; then
 fi
 
 # 检查是否安装了 OpenClaw
-if ! pnpm list openclaw &> /dev/null; then
+if ! command -v openclaw &> /dev/null; then
     echo "OpenClaw 未安装，正在安装..."
     pnpm add -g openclaw
 fi
