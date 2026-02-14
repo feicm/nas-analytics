@@ -31,4 +31,13 @@ echo "提示: 如需配置消息频道（Telegram、Nostr等），请设置相�
 echo ""
 
 # 启动 Gateway
-pnpm openclaw gateway --port 18789 --verbose
+echo "正在执行命令: pnpm openclaw gateway --port 18789 --verbose"
+pnpm openclaw gateway --port 18789 --verbose || {
+    echo ""
+    echo "错误: Gateway 启动失败"
+    echo "请检查:"
+    echo "  1. OpenClaw 是否正确安装"
+    echo "  2. 端口 18789 是否被占用"
+    echo "  3. 环境变量是否正确配置"
+    exit 1
+}
